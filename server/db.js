@@ -1,7 +1,7 @@
 const mongoose = require("mongoose"); 
 
 module.exports.connectDb = async () => {
-  const url = process.env.MONGO_URL || "mongodb://localhost/questions-db";
+  const url = process.env.MONGO_URL || "mongodb+srv://new_user01:EdUcX98UmwlVXRQx@thewilliamcluster-wlccu.azure.mongodb.net/test?retryWrites=true&w=majority";
   return mongoose
     .connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
