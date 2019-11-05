@@ -1,7 +1,7 @@
 const mongoose = require("mongoose"); 
 
 module.exports.connectDb = async () => {
-  const url = process.env.MONGO_URL || "mongodb://localhost/questions-db";
+  const url = process.env.MONGODB_URL || "mongodb://localhost/questions-db";
   return mongoose
     .connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
